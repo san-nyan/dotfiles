@@ -1,0 +1,122 @@
+@import url('../../.cache/wal/colors-waybar.css');
+window#waybar{
+    all:unset;
+}
+* {
+    font-size: 15px;
+    font-family: "CodeNewRoman Nerd Font Propo";
+    transition: all .3s ease;
+}
+.modules-left {
+}
+.modules-center {
+}
+.modules-right {
+}
+#custom-notification,
+#clock,
+#tray,
+#taskbar,
+#workspaces,
+#bluetooth,
+#network,
+#custom-ip,
+#sound,
+#extras{
+    padding: 0px 15px 0px 15px;
+    border-radius: 5px;
+    min-height: 35px;
+    color:@color7;
+}
+
+
+#custom-notification,
+#clock,
+#tray,
+#taskbar{
+    margin: 10px 0px 5px 10px;
+    background: linear-gradient(to right, alpha(@color8,0.5), alpha(@color8,0.7));
+}
+#workspaces {
+    margin: 10px 0px 5px 0px;
+    background: linear-gradient(to right, alpha(@color8,0.8), alpha(@color8,0.7));
+}
+#bluetooth,
+#network,
+#custom-ip,
+#sound,
+#extras {
+    margin: 10px 10px 5px 0px;
+    background: linear-gradient(to right, alpha(@color8,0.7), alpha(@color8,0.5));
+}
+
+
+#cpu,#memory,#temperature,#custom-colorpicker{
+    padding: 0px 5px;
+    transition: all .3s ease; 
+    color:@color7;
+}
+
+#tooltip {
+    background: alpha(@color8,0.8);
+    color: @color7;
+}
+
+#custom-ip:hover, 
+#clock:hover, 
+#custom-pacman:hover, 
+#custom-notification:hover,
+#bluetooth:hover,#network:hover,
+#battery:hover, 
+#cpu:hover,#memory:hover,
+#temperature:hover,
+#pulseaudio:hover,
+#custom-colorpicker:hover,
+#custom-ddcutil:hover,
+#cava:hover
+{
+    transition: all .3s ease;
+    color:@color1;
+}
+#workspaces button {
+    all:unset;
+    padding: 0px 5px;
+    color: alpha(@color4,.4);
+    transition: all .2s ease;
+}
+#workspaces button:hover {
+    color:rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+#workspaces button.active {
+    color: @color4;
+    border: none;
+}
+#workspaces button.empty {
+    color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
+}
+#workspaces button.empty:hover {
+    color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
+    transition: all 1s ease;
+}
+#workspaces button.empty.active {
+    color: @color4;
+    border: none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+}
+#taskbar button {
+    transition: all .3s ease;
+    padding: 0px 5px;
+}
+#taskbar.empty {
+    opacity: 0;
+}
+#cava {
+    font-family: "bargraph";
+}

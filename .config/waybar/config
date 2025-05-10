@@ -1,0 +1,169 @@
+{
+        "layer": "top",
+        "position": "top",
+        "reload_style_on_change": true,
+        "modules-left": ["custom/notification","clock","tray","wlr/taskbar"],
+        "modules-center": ["hyprland/workspaces"],
+        "modules-right": ["group/extras","group/sound","bluetooth","network"],
+
+        "hyprland/workspaces": {
+            "format": "{icon}",
+            "format-icons": {
+                "active": "",
+                "default": "",
+                "empty": ""
+            },
+            "persistent-workspaces": {
+                "*": [ 1,2,3,4,5 ]
+            }
+        },
+        "custom/notification": {
+            "tooltip": false,
+            "format": "",
+            "on-click": "swaync-client -t -sw",
+            "escape": true
+        },
+        "clock": {
+            "format": "{:%H:%M:%S}",
+            "interval": 1,   
+            "tooltip-format": "<tt>{calendar}</tt>",
+            "calendar": {
+                "format": {
+                    "today": "<span color='magenta'><b>{}</b></span>"
+                }
+            },
+            "on-scroll-up": "ddccontrol -r 0x10 dev:/dev/i2c-16 -w 100",
+            "on-scroll-down": "ddccontrol -r 0x10 dev:/dev/i2c-16 -w 0",
+            "actions": {
+                "on-click-right": "shift_down",
+                "on-click": "shift_up"
+            }
+        },
+        "network": {
+            "format-wifi": "{ipaddr} ",
+            "format-ethernet":"{ipaddr} ",
+            "format-disconnected": "{ipaddr} ",
+            "tooltip-format-disconnected": "Error",
+            "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+            "tooltip-format-ethernet": "{ifname} 🖧 ",
+            "on-click": "nm-connection-editor"
+        },
+        "pulseaudio#input": {
+            "format": "{volume}% {icon}",
+            "format-muted": " off",
+            "format-icons": {
+                "default": ["", "", ""]
+            },
+            "max-volume": 100,
+            "scroll-step": 10,
+            "smooth-scrolling-threshold": 1,
+            "on-click": "pavucontrol",
+            "on-click-middle": "pavucontrol"
+        },
+        "cava": {
+            "framerate": 60,
+            "autosens": 0,
+            "sensitivity": 100,
+            "bars": 24,
+            "lower_cutoff_freq": 50,
+            "higher_cutoff_freq": 1000,
+            "method": "pipewire",
+            "source": "auto",
+            "stereo": true,
+            "reverse": false,
+            "bar_delimiter": 0,
+            "monstercat": false, 
+            "waves": false,
+            "noise_reduction": 0.2,
+            "input_delay": 0,
+            "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        },
+        "group/sound": {
+            "orientation": "horizontal",
+            "modules": [
+                "cava",
+                "custom/spacer",
+                "pulseaudio#input"
+
+            ]
+        },
+        "bluetooth": {
+            "format-on": "󰂯",
+            "format-off": "BT-off",
+            "format-disabled": "󰂲",
+            "format-connected-battery": "{device_battery_percentage}% 󰂯",
+            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+            "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+            "on-click-right": "blueman-manager"
+        }, 
+        "battery": {
+            "interval":30,
+            "states": {
+                "good": 95,
+                "warning": 30,
+                "critical": 20
+            },
+            "format": "{capacity}% {icon}",
+            "format-charging": "{capacity}% 󰂄",
+            "format-plugged": "{capacity}% 󰂄 ",
+            "format-alt": "{time} {icon}",
+            "format-icons": [
+                "󰁻",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰂂",
+            "󰁹"
+            ]
+        },
+        "custom/spacer":{
+            "format": " ",
+            "tooltip": false
+        },
+        "custom/colorpicker": {
+            "format": "󰏘",
+            "return-type": "json",
+            "interval": "once",
+            "on-click": "hyprpicker -aq",
+            "signal": 1,
+            "tooltip-format": "hyprpicker -aq"
+        },
+        "cpu": {
+            "format": "󰻠",
+            "tooltip": true
+        },
+        "memory": {
+            "format": ""
+        },
+        "temperature": {
+            "critical-threshold": 80,
+            "format": ""
+        },
+        "tray": {
+            "icon-size": 14,
+            "spacing": 10
+        },
+        "wlr/taskbar": {
+            "format": "{icon}",
+            "icon-size": 15,
+            "icon-theme": "Numix-Circle",
+            "tooltip-format": "{title}",
+            "on-click": "activate"
+        },
+        "custom/expand": {
+            "format": "",
+            "tooltip": false
+        },
+        "group/extras": {
+            "orientation": "horizontal",
+            "modules": [
+                "cpu",
+                "memory",
+                "temperature",
+                "custom/colorpicker"
+            ]
+        }
+} 
+
