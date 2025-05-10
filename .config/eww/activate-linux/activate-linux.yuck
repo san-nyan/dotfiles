@@ -1,0 +1,22 @@
+(defwidget activate-linux []
+  (box
+    :orientation "v"
+    (label :xalign 0 :markup "<span font_size=\"large\">Activate Linux</span>")
+    (label :xalign 0 :text "Go to Settings to activate Linux")))
+
+;; Primary monitor (0)
+(defwindow activate-linux-0
+  :monitor 0
+  :stacking "bg"
+  :focusable "false"
+  :active false
+  :geometry (geometry :x "8px" :y "55px" :width "250px" :anchor "bottom right")
+  (activate-linux))
+
+;; Secondary monitor (1)
+(defwindow activate-linux-1
+  :monitor 1
+  :stacking "bg"
+  :active false
+  :geometry (geometry :x "8px" :y "55px" :width "250px" :anchor "bottom right")
+  (activate-linux))
