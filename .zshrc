@@ -114,5 +114,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.cache/wal/colors-tty.sh
 
 # fastfetch
-fastfetch
+# fastfetch
 
+# anifetch
+# anifetch

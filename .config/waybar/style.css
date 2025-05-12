@@ -5,7 +5,6 @@ window#waybar{
 * {
     font-size: 15px;
     font-family: "CodeNewRoman Nerd Font Propo";
-    transition: all .3s ease;
 }
 .modules-left {
 }
@@ -13,6 +12,7 @@ window#waybar{
 }
 .modules-right {
 }
+
 #custom-notification,
 #clock,
 #tray,
@@ -25,10 +25,10 @@ window#waybar{
 #extras{
     padding: 0px 15px 0px 15px;
     border-radius: 5px;
-    min-height: 35px;
+    min-height: 31px;
     color:@color7;
+    transition: all .3s ease;
 }
-
 
 #custom-notification,
 #clock,
@@ -36,10 +36,12 @@ window#waybar{
 #taskbar{
     margin: 10px 0px 5px 10px;
     background: linear-gradient(to right, alpha(@color8,0.5), alpha(@color8,0.7));
+    border: 2px solid @color4;
 }
 #workspaces {
     margin: 10px 0px 5px 0px;
     background: linear-gradient(to right, alpha(@color8,0.8), alpha(@color8,0.7));
+    border: 2px solid @color4;
 }
 #bluetooth,
 #network,
@@ -48,6 +50,7 @@ window#waybar{
 #extras {
     margin: 10px 10px 5px 0px;
     background: linear-gradient(to right, alpha(@color8,0.7), alpha(@color8,0.5));
+    border: 2px solid @color4;
 }
 
 
@@ -62,21 +65,22 @@ window#waybar{
     color: @color7;
 }
 
-#custom-ip:hover, 
 #clock:hover, 
-#custom-pacman:hover, 
 #custom-notification:hover,
-#bluetooth:hover,#network:hover,
-#battery:hover, 
-#cpu:hover,#memory:hover,
+#bluetooth:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
 #temperature:hover,
 #pulseaudio:hover,
 #custom-colorpicker:hover,
-#custom-ddcutil:hover,
-#cava:hover
+#cava:hover,
+#sound:hover,
+#extras:hover
 {
     transition: all .3s ease;
     color:@color1;
+    border-color: @color1;
 }
 #workspaces button {
     all:unset;
@@ -110,6 +114,9 @@ window#waybar{
     border: none;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
 }
+#taskbar {
+    padding: 0 10 0 10;
+}
 #taskbar button {
     transition: all .3s ease;
     padding: 0px 5px;
@@ -119,4 +126,5 @@ window#waybar{
 }
 #cava {
     font-family: "bargraph";
+    color: @color4;
 }
