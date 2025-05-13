@@ -1,22 +1,23 @@
-# My dotfiles
-
-This directory contains the dotfiles for my system
-
 ## Requirements
 
 Ensure you have the following installed on your system
 
-### Git
+```
+git
+stow
+hyprland
+hyprlock
+kitty
+python
+pywal
+waybar
+```
 
 ```
-pacman -S git
+$ pacman -S git stow hyprland hyprlock kitty python waybar
+$ sudo pip3 install pywal
 ```
 
-### Stow
-
-```
-pacman -S stow
-```
 
 ## Installation
 
