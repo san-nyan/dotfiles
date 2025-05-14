@@ -113,6 +113,8 @@ source $ZSH/oh-my-zsh.sh
 (cat ~/.cache/wal/sequences &)
 source ~/.cache/wal/colors-tty.sh
 
+clear
+
 # fastfetch
 # fastfetch
 
