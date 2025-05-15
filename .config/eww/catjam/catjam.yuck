@@ -1,6 +1,0 @@
-(defwidget catjam-gif [?class]
-	(box :orientation "vertical"
-		 :class {class}
-		 :children [
-		   (xwidget-webkit-goto-uri "file:///home/paw/.config/eww/catjam/catjam.html")
-		 ])

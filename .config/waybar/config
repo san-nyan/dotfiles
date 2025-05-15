@@ -2,20 +2,21 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["custom/notification","clock","tray","wlr/taskbar"],
+        "modules-left": ["custom/notification","clock","tray"],
         "modules-center": ["hyprland/workspaces"],
         "modules-right": ["group/extras","group/sound","bluetooth","network"],
 
         "hyprland/workspaces": {
             "format": "{icon}",
             "format-icons": {
-                "active": "",
                 "default": "",
-                "empty": ""
+                "empty": "",
+                "special": ""
             },
             "persistent-workspaces": {
                 "*": [ 1,2,3,4,5 ]
-            }
+            },
+            "show-special": true
         },
         "custom/notification": {
             "tooltip": false,

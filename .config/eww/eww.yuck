@@ -1,2 +1,1 @@
-(include "activate-linux/activate-linux.yuck")
-(include "catjam/catjam.yuck")
+(include "activate-linux/activate-linux.yuck")q
