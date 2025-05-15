@@ -1,4 +1,5 @@
-# This setup uses [GNU Stow](https://www.gnu.org/software/stow/) to create symlinks into your config directory and it requires the folder structure inside the root folder to be the same as how it would be in your user folder. For example if you want something to link to ~/.config/hypr you need to make changes in the folder dotfiles/.config/hypr
+# This setup uses [GNU Stow](https://www.gnu.org/software/stow/) to create symlinks into your config directory and it requires the folder structure inside the root folder to be the same as how it would be in your user folder. 
+# For example if you want something to link to `~/.config/hypr` you need to make changes in the folder `dotfiles/.config/hypr`
 
 
 
