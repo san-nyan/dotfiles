@@ -36,6 +36,12 @@ $ git clone git@github.com/san-nyan/dotfiles.git
 $ cd dotfiles
 ```
 
+make a backup of your config directory in case you want to revert
+
+```
+$ cp -r ~/.config ~/.configbak
+```
+
 then use GNU stow to create symlinks
 
 ```
