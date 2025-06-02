@@ -62,7 +62,7 @@
             "on-click-middle": "pavucontrol"
         },
         "cava": {
-            "framerate": 60,
+            "framerate": 165,
             "autosens": 0,
             "sensitivity": 100,
             "bars": 24,
